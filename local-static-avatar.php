@@ -30,10 +30,8 @@ if ( LOCAL_AVATAR_ENABLED ) {
 		$size = $args['size'];
 		if ( file_exists( LOCAL_AVATAR_DIR . "/avatar-{$size}x{$size}.jpg" ) ) {
 			$args['url'] = LOCAL_AVATAR_URL . "/avatar-{$size}x{$size}.jpg";
-		} else if ( LOCAL_AVATAR_DIR . '/avatar-2048x2048.jpg' ) {
-			$args['url'] = LOCAL_AVATAR_URL . '/avatar-2048x2048.jpg';
 		} else {
-			$args['url'] = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+			$args['url'] = LOCAL_AVATAR_URL . '/avatar-2048x2048.jpg';
 		}
 		
 		return $args;
